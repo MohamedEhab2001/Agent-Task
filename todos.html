@@ -1,16 +1,57 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/todos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/todos.css" />
+    <script
+      src="https://kit.fontawesome.com/7aa800aeac.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>To-dos</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="custom-container">
-        <div class="wrapper">
-            <h1>Welcome in to-do App</h1>
+      <div class="wrapper">
+        <h1>Welcome in to-do App</h1>
+        <button class="btnd" id="dark">toggle dark mode</button>
+        <button class="btnd" id="logout">logout</button>
+        <form id="todo">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="place here your missions" required>
+                <input type="submit" value="Add task">
+            </div>
+          
+        </form>
+        <div class="todos" id="conTod">
+            <p>Your To-Dos</p>
+            <p>Double click to change To-Do status</p>
         </div>
     </div>
-</body>
+      </div>
+    </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="./js/classes/User.js"></script>
+    <script src="./js/classes/Routes.js"></script>
+    <script src="./js/classes/Todo.js"></script>
+    <script src="./js/controller/Todo.js"></script>
+  </body>
 </html>

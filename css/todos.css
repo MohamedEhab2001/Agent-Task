@@ -8,15 +8,74 @@ html[data-theme='dark'] {
   --lightBg: #232323;
   --lightColor: #fff; }
 
+.custom-container .wrapper .btnd, .custom-container .wrapper #todo .form-group input[type=submit] {
+  border: 1px solid var(--lightBtn);
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  color: var(--lightBtn);
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 0 var(--lightBg); }
+  .custom-container .wrapper .btnd:hover, .custom-container .wrapper #todo .form-group input[type=submit]:hover {
+    color: var(--lightBg);
+    box-shadow: inset 300px 0 0 0 var(--lightBtn); }
+
+body {
+  background-color: var(--lightBg); }
+
 .custom-container {
   padding: 20px;
   height: 80vh;
   width: 50%;
   margin: 0px auto; }
   .custom-container .wrapper {
-    background-color: var(--lightBtn);
+    background-color: var(--lightBg);
     max-height: 100%;
     overflow: auto;
     padding: 10px; }
+    .custom-container .wrapper h1 {
+      color: var(--lightBtn);
+      font-family: "Merriweather Sans", sans-serif;
+      text-align: center;
+      margin-bottom: 5px; }
+    .custom-container .wrapper #todo .form-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px; }
+      .custom-container .wrapper #todo .form-group input[type=text] {
+        flex: 2; }
+      .custom-container .wrapper #todo .form-group input[type=submit] {
+        flex: 1; }
+    .custom-container .wrapper .done {
+      text-decoration: line-through;
+      color: var(--lightBg);
+      background-color: var(--lightBtn);
+      border: 1px solid var(--lightBg);
+      transition: 0.8s; }
+    .custom-container .wrapper .todos {
+      width: 100%;
+      padding: 5px; }
+      .custom-container .wrapper .todos p {
+        text-align: center; }
+      .custom-container .wrapper .todos .task {
+        width: 80%;
+        padding: 10px;
+        margin: 5px auto;
+        border: 1px solid var(--lightBtn);
+        color: var(--lightColor);
+        display: flex;
+        cursor: pointer;
+        gap: 10px;
+        transition: 0.8s; }
+        .custom-container .wrapper .todos .task p {
+          flex: 5; }
+        .custom-container .wrapper .todos .task .btns {
+          flex: 1; }
+          .custom-container .wrapper .todos .task .btns button {
+            margin: 2px; }
 
 /*# sourceMappingURL=todos.css.map */

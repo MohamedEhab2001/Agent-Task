@@ -1,14 +1,72 @@
-@import "../helpers/variabels.scss";
+@import "../helpers/variabels.scss", "../components/button";
 
+body{
+    background-color: var(--lightBg);
+}
 .custom-container{
     padding: 20px;
     height: 80vh;
     width: 50%;
     margin: 0px auto;
     .wrapper{
-        background-color: var(--lightBtn);
+        background-color: var(--lightBg);
         max-height: 100%;
         overflow: auto;
         padding: 10px;
+        h1{
+            color: var(--lightBtn);
+            font-family: "Merriweather Sans", sans-serif;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .btnd{
+            @extend %btn;
+        }
+        #todo .form-group{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            input[type=text]{
+                flex: 2;
+            }
+            input[type=submit]{
+                @extend %btn;
+                flex : 1
+            }
+        }
+        .done{
+            text-decoration: line-through;
+            color: var(--lightBg);
+            background-color: var(--lightBtn);
+            border: 1px solid var(--lightBg);
+            transition: 0.8s;
+        }
+        .todos{
+            width: 100%;
+            padding: 5px;
+            p{
+                text-align: center;
+            }
+            .task{
+                width: 80%;
+                padding: 10px;
+                margin: 5px auto;
+                border: 1px solid var(--lightBtn);
+                color: var(--lightColor);
+                display: flex;
+                cursor: pointer;
+                gap: 10px;
+                transition: 0.8s;
+                p{
+                    flex: 5;
+                }
+                .btns{
+                    flex: 1;
+                    button{
+                        margin: 2px;
+                    }
+                }
+            }
+        }
     }
 }

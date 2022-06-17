@@ -8,6 +8,10 @@ class User{
             token
         }))
     }
+    logout(){
+        localStorage.removeItem("token")
+        localStorage.removeItem("todos")
+    }
     static getUser (){
         return async (data) => {
             document.getElementById("loading").style.display = "flex"
