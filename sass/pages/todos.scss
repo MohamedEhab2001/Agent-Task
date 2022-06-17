@@ -70,3 +70,22 @@ body{
         }
     }
 }
+
+#update{
+    position: absolute;
+    right: 55px;
+    top: 10px;
+    border: 1px solid var(--lightBtn);
+    padding: 10px;
+    width: 350px;
+    height: fit-content;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input[type=submit]{
+            @extend %btn
+        }
+    }
+}

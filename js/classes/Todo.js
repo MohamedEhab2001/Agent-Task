@@ -34,6 +34,14 @@ class Todo{
             localStorage.setItem("todos" , JSON.stringify(newTodos))
             window.location.reload()
         }
+        update.onclick = () => {
+            let todos = JSON.parse(localStorage.getItem("todos"))
+            let toUpdate = todos.find(e => e.id == this.id)
+            const formUpdate = document.getElementById("FormUp")
+            formUpdate[0].value = this.title
+            formUpdate[0].disabled = false
+            formUpdate[0].id = toUpdate.id
+        }
         parent.ondblclick = () => {
             if(parent.classList.contains("done")){
                 button.classList.remove("btn-warning")
@@ -47,6 +55,18 @@ class Todo{
         }
 
         con.append(parent)
+    }
+    static update(key , value , id){
+        let todos = JSON.parse(localStorage.getItem("todos"))
+        todos = todos.map((e) => {
+            if(e.id == id){
+                return {...e , [key]:value}
+            }else{
+                return e
+            }
+        })
+        localStorage.setItem("todos" , JSON.stringify(todos))
+        window.location.reload();
     }
     static getUserTodos(){
         return async () => {

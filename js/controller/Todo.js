@@ -5,8 +5,13 @@ if(!localStorage.getItem("token")){
     user = new User(JSON.parse(localStorage.getItem("token")).id)
 }
 
+//            
 
-
+const formUpdate = document.getElementById("FormUp")
+formUpdate.onsubmit = (e) => {
+    e.preventDefault();
+    Todo.update("title" , formUpdate[0].value , formUpdate[0].id)
+}
 if(!localStorage.getItem("todos")){
     Todo.getUserTodos()().then(res => {
         let arr = []
