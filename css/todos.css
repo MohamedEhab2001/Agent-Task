@@ -1,0 +1,22 @@
+html {
+  --lightBtn: #FE016C;
+  --lightBg: #fff;
+  --lightColor: #232323; }
+
+html[data-theme='dark'] {
+  --lightBtn: #FFBD07;
+  --lightBg: #232323;
+  --lightColor: #fff; }
+
+.custom-container {
+  padding: 20px;
+  height: 80vh;
+  width: 50%;
+  margin: 0px auto; }
+  .custom-container .wrapper {
+    background-color: var(--lightBtn);
+    max-height: 100%;
+    overflow: auto;
+    padding: 10px; }
+
+/*# sourceMappingURL=todos.css.map */

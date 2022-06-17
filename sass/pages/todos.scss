@@ -1,0 +1,14 @@
+@import "../helpers/variabels.scss";
+
+.custom-container{
+    padding: 20px;
+    height: 80vh;
+    width: 50%;
+    margin: 0px auto;
+    .wrapper{
+        background-color: var(--lightBtn);
+        max-height: 100%;
+        overflow: auto;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,10 @@
+html{
+    --lightBtn: #FE016C;
+    --lightBg: #fff;
+    --lightColor: #232323;
+}
+html[data-theme='dark'] {
+   --lightBtn: #FFBD07;
+   --lightBg: #232323;
+   --lightColor: #fff;
+ }

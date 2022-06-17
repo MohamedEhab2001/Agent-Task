@@ -1,0 +1,99 @@
+html {
+  --lightBtn: #FE016C;
+  --lightBg: #fff;
+  --lightColor: #232323; }
+
+html[data-theme='dark'] {
+  --lightBtn: #FFBD07;
+  --lightBg: #232323;
+  --lightColor: #fff; }
+
+.container .wrapper form .custom-form-group input {
+  width: 100%;
+  outline: none;
+  border: 0.5px solid var(--lightBtn);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--lightBg);
+  flex: 6; }
+
+.container .wrapper form .btns button {
+  border: 1px solid var(--lightBtn);
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  color: var(--lightBtn);
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 0 var(--lightBg); }
+  .container .wrapper form .btns button:hover {
+    color: var(--lightBg);
+    box-shadow: inset 300px 0 0 0 var(--lightBtn); }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--lightBtn); }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+  .container .wrapper {
+    width: 40%;
+    background-color: var(--lightBg);
+    height: fit-content;
+    padding: 25px;
+    position: relative; }
+    .container .wrapper #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: var(--lightBg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none; }
+      .container .wrapper #loading i {
+        color: var(--lightBtn);
+        font-size: 40px; }
+    .container .wrapper .title {
+      font-size: 45px;
+      text-align: center;
+      margin: 55px;
+      font-family: "Merriweather Sans", sans-serif;
+      color: var(--lightBtn);
+      font-weight: bold; }
+    .container .wrapper form {
+      width: 80%;
+      margin: 5px auto; }
+      .container .wrapper form .custom-form-group {
+        display: flex;
+        margin-bottom: 20px; }
+        .container .wrapper form .custom-form-group label {
+          flex: 1;
+          font-size: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--lightBtn); }
+      .container .wrapper form .btns {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center; }
+
+#error-message {
+  text-align: center;
+  color: var(--lightBtn);
+  display: block; }
+
+/*# sourceMappingURL=auth.css.map */

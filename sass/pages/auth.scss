@@ -1,0 +1,78 @@
+@import "../helpers/variabels.scss", "../components/input" , "../components/button";
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--lightBtn);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .wrapper {
+    width: 40%;
+    background-color: var(--lightBg);
+    height: fit-content;
+    padding: 25px;
+    position: relative;
+    #loading{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: var(--lightBg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      i{
+        color: var(--lightBtn);
+        font-size: 40px;
+      }
+    }
+    .title {
+      font-size: 45px;
+      text-align: center;
+      margin: 55px;
+      font-family: "Merriweather Sans", sans-serif;
+      color: var(--lightBtn);
+      font-weight: bold;
+    }
+    form {
+      width: 80%;
+      margin: 5px auto;
+      .custom-form-group{
+        display: flex;
+        margin-bottom: 20px;
+        label{
+            flex: 1;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--lightBtn);
+        }
+        input {
+            @extend %input_field;
+          }
+      }
+      .btns{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        button{
+          @extend %btn;
+        }
+      }
+    }
+  }
+}
+#error-message{
+  text-align: center;
+  color: var(--lightBtn);
+  display: block;
+}
