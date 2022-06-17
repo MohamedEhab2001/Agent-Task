@@ -19,11 +19,11 @@ sass
 bootstrap
 
 # Functions :
-login
-logout
-create todo
-add todo
-dark mode
-change todo status
-Update todo
-Draggable list
+1- login
+2- logout
+3- create todo
+4- add todo
+5- dark mode
+6- change todo status
+7- Update todo
+8- Draggable list
