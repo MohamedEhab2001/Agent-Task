@@ -19,9 +19,16 @@ body{
             text-align: center;
             margin-bottom: 5px;
         }
-        .btnd{
-            @extend %btn;
+        .btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            .btnd{
+                @extend %btn;
+            }
         }
+
         #todo .form-group{
             display: flex;
             justify-content: center;
